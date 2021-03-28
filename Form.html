@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" media="screen" href="styles.css" >
+    <style>
+      div {
+        font-family:Arial;
+        font-size:22px;
+        margin: 21px;
+        margin-left:27px;        
+      }
+      
+      form {
+        margin: 0 auto;
+        width: 431px;
+        height: 345px;
+        padding: 1em; /* Контур формы */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f7fc;
+        box-shadow: 7px 7px 5px rgba(73, 71, 71, 0.1); /* Тень */        
+      }
+
+      ul {        
+        list-style: none;
+        padding: 0;
+        margin: 22px;        
+      }
+
+      form li + li {
+        margin-top: 20px;
+      }
+      
+      input {
+        font-family:Arial;
+        font-size: 14px;            
+        width: 381px; /* Определим размер полей */
+        height: 49px;
+        box-sizing: border-box; 
+        border: 1px solid rgb(244, 244, 248); /* Стилизуем границы полей */       
+        border-radius: 5px;
+      }
+
+      input:focus {
+        border-color: #556cf0; /* Дополнительная подсветка для элементов в фокусе */
+      }
+
+      button {
+        font-family:Arial;
+        font-size: 16px;
+        margin-left: 0em;
+        background-color: #7272fd; /* Создаем фон */
+        color: white;
+        width: 381px; 
+        height: 49px;
+        padding-left: 1px;
+        border-radius: 5px;
+      }
+    
+    </style>
+  </head>
+
+  <body>
+    <form action="https://60376bfd5435040017722533.mockapi.io/form" method="post">
+      <div class="caption"><strong>Задать вопрос</strong></div>
+      <ul>
+        <li>
+          <input type="text" name="name" placeholder=" Фамилия Имя Отчество*" pattern="^[ А-Яа-яЁё-]+$" required/>
+        </li>
+        <li>
+          <input type="tel" name="phone" placeholder=" Телефон*" pattern="^[ 0-9-+]+$" required/>
+        </li>
+        <li>
+          <input type="email" name="email" placeholder=" Email"/>
+        </li>
+        <li class="button">
+          <button type="submit">ОТПРАВИТЬ ЗАПРОС</button>
+        </li>
+      </ul>
+    </form>
+   </body> 
+</html>
